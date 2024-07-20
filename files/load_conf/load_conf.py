@@ -58,5 +58,3 @@ conf_file_path = '/'.join(__file__.split('/')[:-3])+'/examples/files/example.con
 
 conf = get_conf(conf_file_path, unpack_singles=True)
 for i in conf: print(i , '=', conf[i])
-
-help(get_conf)
