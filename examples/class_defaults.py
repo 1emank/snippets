@@ -26,7 +26,7 @@ class example:
     def __bool__(self):                         # bool(self)
         """__bool__(self): Defines the conversion of the object to a boolean with bool()."""
         return bool(self.data)
-    def __int__(self):                          # int(self)             # Transformación arbitraria
+    def __int__(self):                          # int(self)             # Arbitrary transformation
         """__int__(self): Defines the conversion of the object to an integer with int()."""
         return self.data
     def __index__(self):                        # operator.index(self)  # Lossless Integer value
@@ -35,51 +35,51 @@ class example:
         default method when other numeric representations aren't defined."""
         return self.data
     def __float__(self):                        # float(self)
-        """__float__(self): Implementa la conversión a flotante (float())."""
+        """__float__(self): Defines the conversion of the object to a float value."""
         return float(self.data)
     def __complex__(self):                      # complex(self)
-        """__complex__(self): Implementa la conversión a número complejo (complex())."""
+        """__complex__(self): Defines the conversion of the object to a complex number."""
         return complex(self.data)
     def __round__(self):                        # round(self)
-        """__round__(self) - round to nearest (ties to even): """
+        """__round__(self): Defines how to round to nearest (ties to even): """
         pass
     def __floor__(self):                        # math.floor(self)
-        """__floor__(self): - round down (towards negative infinity): """
+        """__floor__(self): Defines how to round down (towards negative infinity): """
         pass
     def __ceil__(self):                         # math.ceil(self)
-        """__ceil__(self): - round up (towards positive infinity): """
+        """__ceil__(self): Defines how to round up (towards positive infinity): """
         pass
     def __trunc__(self):                        # math.trunc(self)
-        """__trunc__(self): - round towards zero: """
+        """__trunc__(self): Defines how to round towards zero: """
         pass
 
-    # Métodos de Comparación
+    # Comparison methods
     def __lt__(self, other):                    # self < other
-        """__lt__(self, other): Menor que (<)."""
+        """__lt__(self, other): Less than (<)."""
         return self < other
     def __le__(self, other):                    # self <= other
-        """__le__(self, other): Menor o igual que (<=)."""
+        """__le__(self, other): Less than or equal to (<=)."""
         return self <= other
     def __eq__(self, other):                    # self == other
-        """__eq__(self, other): Igual a (==)."""
+        """__eq__(self, other): Equal to (==)."""
         return self.data == other
     def __ne__(self, other):                    # self != other
-        """__ne__(self, other): Distinto de (!=)."""
+        """__ne__(self, other): Different than (!=)."""
         return self != other
     def __gt__(self, other):                    # self > other
-        """__gt__(self, other): Mayor que (>)."""
+        """__gt__(self, other): Greater than (>)."""
         return self.data > other
     def __ge__(self, other):                    # self >= other
-        """__ge__(self, other): Mayor o igual que (>=)."""
+        """__ge__(self, other): Greater than or equal to (>=)."""
         return self.data >= other
 
-    # Métodos de Contenedores
+    # Container methods
 
     def __contains__(self, item):               # X in self
         return item in self.elements
-        """__contains__(self, item): Verifica si un ítem está contenido (in)."""
+        """__contains__(self, item): Defines how to evaluate if something is inside the object (in)."""
     def __len__(self):                          # len(self)
-        """__len__(self): Devuelve la longitud del contenedor (len())."""
+        """__len__(self): Defines how to measure the length of the object (len())."""
         return len(self.elements)
     def __getitem__(self, index : int | slice): # self[x]
         """__getitem__(self, key): Obtiene un ítem ([])."""
